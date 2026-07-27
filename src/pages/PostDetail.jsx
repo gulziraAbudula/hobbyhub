@@ -30,6 +30,24 @@ export const PostDetail = () => {
         return <h2>Loading...</h2>
     }
 
+    const handleUpvote = async () => {
+        const { error } = await supabase
+                        .from("Posts")
+                        .update({
+                            upvotes: post.upvotes + 1
+                        })
+                        .eq("id", post.id)
+        if (error) {
+            console.log(error)
+            return
+        }
+
+        setPost({
+            ...post,
+            upvotes: post.upvotes + 1
+        })
+    }
+
     return (
         <>
             <div className="post-detail">
@@ -45,6 +63,10 @@ export const PostDetail = () => {
                 <p>
                     👍 {post.upvotes}
                 </p>
+                
+                <button onClick={handleUpvote}>
+                    👍 Upvote
+                </button>
 
                 <p>{post.content}</p>
 
