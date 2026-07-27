@@ -1,0 +1,25 @@
+.edit-post {
+    width: 600px;
+    margin: 40px auto;
+}
+
+.edit-post form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-post input,
+.edit-post textarea {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.edit-post textarea {
+    min-height: 150px;
+}
+
+.edit-post button {
+    padding: 10px;
+    cursor: pointer;
+}

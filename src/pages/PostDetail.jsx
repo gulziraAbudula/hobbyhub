@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { supabase } from "../client"
 import "./PostDetail.css"
 
@@ -9,6 +9,7 @@ export const PostDetail = () => {
     const [post, setPost] = useState(null)
     const [comments, setComments] = useState([])
     const [newComment, setNewComment] = useState("")
+    const navigate = useNavigate()
 
     useEffect (() => {
         fetchPost()
@@ -91,6 +92,7 @@ export const PostDetail = () => {
     return (
         <>
             <div className="post-detail">
+                <button onClick={() => navigate(`/edit/${post.id}`)}>Edit</button>
                 <h1>{post.title}</h1>
                 <p>
                     Created:
