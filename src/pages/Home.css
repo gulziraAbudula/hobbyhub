@@ -1,8 +1,27 @@
+.home {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.home h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
 .home input {
     width: 100%;
-    padding: 10px;
-    margin: 20px 0;
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
+
+    border: 1px solid #ddd;
     border-radius: 8px;
+
+    margin-bottom: 25px;
+}
+
+.home input:focus {
+    outline: none;
+    border-color: #4a90e2;
 }

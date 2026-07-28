@@ -109,3 +109,45 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #eef2f7;
+
+}
+
+@media (max-width: 768px) {
+
+    .home,
+    .create-post,
+    .post-detail {
+
+        width: 95%;
+
+        margin: 20px auto;
+
+        padding: 20px;
+
+    }
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    nav div {
+
+        display: flex;
+
+        gap: 15px;
+
+    }
+
+}

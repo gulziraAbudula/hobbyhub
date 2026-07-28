@@ -1,21 +1,31 @@
 .create-post {
-    width: 600px;
+    width: 700px;
     margin: 40px auto;
-}
-
-.create-post form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
 }
 
 .create-post input,
 .create-post textarea {
-    padding: 10px;
-    font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 .create-post button {
-    padding: 10px;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #242424;
+    color: white;
     cursor: pointer;
 }
+
+.create-post button:hover {
+    background: #242424;
+}
+
