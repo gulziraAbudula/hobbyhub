@@ -133,7 +133,7 @@ export const PostDetail = () => {
                 </button>
 
                 <button onClick={handleDelete}>
-                    Delete Post
+                    🗑 Delete Post
                 </button>
 
                 <p>{post.content}</p>
