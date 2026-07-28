@@ -1,16 +1,81 @@
-# React + Vite
+# HobbyHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HobbyHub is a forum web application where users can create posts about their favorite hobbies. Users can browse posts, view individual posts, leave comments, upvote posts, edit posts, and delete posts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Create a new post
+- View all posts
+- View individual post details
+- Search posts by title
+- Sort posts by newest or most upvotes
+- Upvote posts
+- Edit existing posts
+- Delete posts
+- Add comments to posts
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router
+- Supabase
+- CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository.
+
+```bash
+git clone https://github.com/gulziraAbudula/hobbyhub.git
+```
+
+2. Navigate to the project folder.
+
+```bash
+cd hobbyhub
+```
+
+3. Install dependencies.
+
+```bash
+npm install
+```
+
+4. Start the development server.
+
+```bash
+npm run dev
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+├── pages/
+├── client.js
+├── App.jsx
+└── main.jsx
+```
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented required features:
+
+<img src="./assets/video-walkthrough.gif" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with LICEcap  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
+
+## Author
+
+Gulzira Abdullah
+
+## Acknowledgements
+
+Created as the final project for CodePath WEB102.
