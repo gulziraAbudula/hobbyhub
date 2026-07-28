@@ -89,6 +89,28 @@ export const PostDetail = () => {
         })
     }
 
+    const handleDelete = async () => {
+        const confirmed = window.confirm(
+            "Are you sure you want to delete this post?"
+        )
+
+        if (!confirmed) {
+            return
+        }
+
+        const { error } = await supabase
+                            .from("Posts")
+                            .delete()
+                            .eq("id", post.id)
+        
+        if (error) {
+            console.log(error)
+            return
+        }
+
+        navigate("/")
+    }
+
     return (
         <>
             <div className="post-detail">
@@ -108,6 +130,10 @@ export const PostDetail = () => {
                 
                 <button onClick={handleUpvote}>
                     👍 Upvote
+                </button>
+
+                <button onClick={handleDelete}>
+                    Delete Post
                 </button>
 
                 <p>{post.content}</p>
