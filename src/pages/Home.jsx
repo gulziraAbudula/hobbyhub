@@ -4,6 +4,7 @@ import { PostCard } from "../components/PostCard"
 
 export const Home = () => {
     const [posts, setPosts] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
 
     useEffect(() => {
         fetchPosts()
@@ -22,20 +23,32 @@ export const Home = () => {
         setPosts(data)
     }
 
+    const filteredPosts = posts.filter((post) =>
+        post.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+
     return (
         <>
             <div className="home">
                 <h1>HobbyHub</h1>
-                {posts.length == 0 ? (
-                    <p>No posts yet.</p>
+
+                <input
+                    type="text"
+                    placeholder="Search posts by title..."
+                    value={searchTerm}
+                    onChange={(event) => setSearchTerm(event.target.value)}
+                />
+
+                {filteredPosts.length == 0 ? (
+                    <p>No posts found.</p>
                 ) : (
-                    posts.map((post) => (
+                    filteredPosts.map((post) => (
                         <PostCard
                             key={post.id}
                             post={post}
                         />
                     ))
-                )}
+                )}             
             </div>
         </>
     )
