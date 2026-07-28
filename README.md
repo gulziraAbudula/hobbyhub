@@ -63,7 +63,7 @@ src/
 
 Here's a walkthrough of implemented required features:
 
-<img src="./assets/video-walkthrough.gif" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
+<img src="./src/assets/video-walkthrough.gif" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap  
